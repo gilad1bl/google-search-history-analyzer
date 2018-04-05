@@ -273,7 +273,7 @@ searchesOnDays = {"Monday": 0, "Tuesday": 0, "Wednesday": 0,
                   "Sunday": 0}
 
 for stamp in queriesTimeStamps:
-    day = time.strftime("%A", time.localtime(int(stamp)))
+    day = time.strftime("%A", time.localtime(int(stamp)/1000000))
     searchesOnDays[day] = searchesOnDays[day] + 1
 
 weeksInDataSet = totalNumOfDays/7
